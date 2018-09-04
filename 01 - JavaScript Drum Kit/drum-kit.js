@@ -22,6 +22,6 @@ function hitDrum(drumNode) {
   sound.play();
 }
 
-function releaseDrum() {
-  aBtn.classList.remove("playing");
+function releaseDrum(e) {
+  e.currentTarget.classList.remove("playing");
 }
