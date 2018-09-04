@@ -21,6 +21,7 @@ function hitDrum(drumNode) {
   drumNode.classList.add("playing");
   var keyCode = drumNode.getAttribute("data-key");
   var sound = document.querySelector('audio[data-key="'+keyCode+'"]');
+  sound.currentTime = 0;
   sound.play();
 }
 
