@@ -1,9 +1,11 @@
-const aBtn = document.querySelector("#a");
+const drums = document.querySelectorAll(".key");
 
 window.addEventListener("keydown", keyDrum);
 
-aBtn.addEventListener("click", clickDrum);
-aBtn.addEventListener("transitionend", releaseDrum);
+drums.forEach((drum) => {
+  drum.addEventListener("click", clickDrum);
+  drum.addEventListener("transitionend", releaseDrum);
+});
 
 function keyDrum(e) {
   var drumNode = document.querySelector('div[data-key="'+e.keyCode+'"]')
